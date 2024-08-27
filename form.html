@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Example</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left-column">
+            <div class="form-group">
+                <label for="ledgerNo">Ledger No.</label>
+                <input type="text" id="ledgerNo">
+            </div>
+            <div class="form-group">
+                <label for="cashDebitLimit">Cash Debit Limit Exception</label>
+                <input type="text" id="cashDebitLimit" value="10.00">
+            </div>
+            <div class="form-group">
+                <label for="clearingExceptionLimitDr">Clearing Exception Limit (Dr.)</label>
+                <input type="text" id="clearingExceptionLimitDr" value="9,99,99,99,99,999.99">
+            </div>
+            <div class="form-group">
+                <label for="transferExceptionLimitDr">Transfer Exception Limit (Dr.)</label>
+                <input type="text" id="transferExceptionLimitDr" value="10.00">
+            </div>
+            <div class="form-group">
+                <label for="relativeStaffID">Relative Staff ID</label>
+                <input type="text" id="relativeStaffID">
+            </div>
+            <div class="form-group">
+                <label for="preferredLanguageCode">Preferred Language Code</label>
+                <input type="text" id="preferredLanguageCode" value="INFENG">
+            </div>
+            <div class="form-group">
+                <label for="preferentialCalendarBase">Preferential Calendar Base</label>
+                <select id="preferentialCalendarBase">
+                    <option>Select</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="acStatement">A/c. Statement <span style="color: red;">*</span></label>
+                <select id="acStatement">
+                    <option>Email Statement</option>
+                    <option>Physical Statement</option>
+                    <option>Both</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="dispatchMode">Dispatch Mode</label>
+                <select id="dispatchMode">
+                    <option>C - Collect by Person</option>
+                    <option>C - Email</option>
+                    <option>C - Courier</option>
+                </select>
+            </div>
+            <label for="accountInfo">Account Information</label>
+            <div class="form-group-checkbox">
+                <input type="checkbox" id="enablePassSheetFrequency" checked>
+                <label for="enablePassSheetFrequency">Enable Pass Sheet Frequency at Related Party</label>
+            </div>
+            <div class="form-group-checkbox">
+                <input type="checkbox" id="relatedToStaff">
+                <label for="relatedToStaff">Related to Staff</label>
+            </div>
+            <div class="form-group-checkbox">
+                <input type="checkbox" id="allowSweeps" checked>
+                <label for="allowSweeps">Allow Sweeps</label>
+            </div>
+            <div class="form-group-checkbox">
+                <input type="checkbox" id="collectCharges">
+                <label for="collectCharges">Collect Charges</label>
+            </div>
+            <div class="form-group-checkbox">
+                <input type="checkbox" id="turnoverDetails">
+                <label for="turnoverDetails">Turnover Details</label>
+            </div>
+            <div class="form-group-checkbox">
+                <input type="checkbox" id="localCalendar">
+                <label for="localCalendar">Local Calendar</label>
+            </div>
+            <div class="form-group-checkbox">
+                <input type="checkbox" id="ecsEnabled">
+                <label for="ecsEnabled">ECS Enabled</label>
+            </div>
+        </div>
+
+        <div class="right-column">
+            <div class="form-group">
+                <label for="contactPhoneNo">Contact Phone No.</label>
+                <input type="text" id="contactPhoneNo" value="1234">
+            </div>
+            <div class="form-group">
+                <label for="cashCreditLimit">Cash Credit Limit Exception</label>
+                <input type="text" id="cashCreditLimit" value="10.00">
+            </div>
+            <div class="form-group">
+                <label for="clearingExceptionLimitCr">Clearing Exception Limit (Cr.)</label>
+                <input type="text" id="clearingExceptionLimitCr" value="9,99,99,99,99,999.99">
+            </div>
+            <div class="form-group">
+                <label for="transferExceptionLimitCr">Transfer Exception Limit (Cr.)</label>
+                <input type="text" id="transferExceptionLimitCr" value="10.00">
+            </div>
+            <div class="form-group">
+                <label for="nameInPreferredLanguage">Name in Preferred Language</label>
+                <input type="text" id="nameInPreferredLanguage">
+            </div>
+            <div class="container">
+                <form>
+                    <!-- Common flex container for alignment -->
+                    <div class="form-row">
+                        <!-- Additional Calendar Base -->
+                        <div class="form-group">
+                            <label>Additional Calendar Base</label>
+                            <div class="form-group-inline">
+                                <label for="additionalCalendarNone">None</label>
+                                <input type="radio" id="additionalCalendarNone" name="additionalCalendar" value="None">
+                                <label for="additionalCalendarHijri">Hijri</label>
+                                <input type="radio" id="additionalCalendarHijri" name="additionalCalendar" value="Hijri">
+                            </div>
+                        </div>
+        
+                        <!-- Statement Frequency -->
+                        <div class="form-group">
+                            <label for="frequency">Statement Frequency</label>
+                            <div class="frequency-container">
+                                <div class="line-1">
+                                    <select id="frequency-type">
+                                        <option value="Y">Yearly</option>
+                                        <option value="Q">Quarterly</option>
+                                        <option value="HQ">Half Quarterly</option>
+                                        <option value="FQ">Full Quarterly</option>
+                                    </select>
+                                    <select id="frequency-period">
+                                        <option value="1st">1st Week</option>
+                                        <option value="2nd">2nd Week</option>
+                                        <option value="3rd">3rd Week</option>
+                                        <option value="4th">4th Week</option>
+                                    </select>
+                                </div>
+                                <div class="line-2">
+                                    <select id="day-type">
+                                        <option value="day">Day</option>
+                                    </select>
+                                    <select id="day-number">
+                                        <!-- Generating options from 1 to 30 -->
+                                        <script>
+                                            for (let i = 1; i <= 30; i++) {
+                                                document.write(`<option value="${i}">${i}</option>`);
+                                            }
+                                        </script>
+                                    </select>
+                                    <select id="next-day">
+                                        <option value="today">Today</option>
+                                        <option value="yesterday">Yesterday</option>
+                                        <option value="last-day">Last Day</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>    
+            <div class="form-group">
+                <label for="nextPrintDate">Next Print Date</label>
+                <input type="date" id="nextPrintDate" value="2024-05-21">
+            </div>
+            <div class="form-group notes">
+                <label for="notes">Notes</label>
+                <textarea id="notes"></textarea>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    // JavaScript to set the current date as the default value
+    const dateInput = document.getElementById('nextPrintDate');
+    const today = new Date().toISOString().split('T')[0];
+    dateInput.value = today;
+</script>
+    
+
+
+   
+</body>
+</html>

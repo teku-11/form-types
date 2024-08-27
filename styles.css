@@ -1,0 +1,155 @@
+body {
+    font-family: Arial, sans-serif;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+.form-group label {
+    display: block;
+    font-weight: bold;
+}
+.form-group input, 
+.form-group select {
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+}
+.form-group-checkbox {
+    display: flex;
+    align-items: center;
+}
+.form-group-checkbox input {
+    width: auto;
+    margin-right: 10px;
+
+}
+.half-width {
+    width: 48%;
+}
+.notes {
+    height: 80px;
+}
+.right-column {
+    width: 48%;
+}
+.left-column {
+    width: 48%;
+}
+.form-group-inline {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 4%;
+}
+.form-group-inline select, 
+.form-group-inline input {
+    width: 5%;
+}
+.form-group-inline label {
+    width: 0.1%;
+}
+form {
+    margin: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.frequency-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 0.1%;
+}
+
+.line-1, .line-2 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.line-1 select, .line-2 select {
+    margin-right: 8px;
+    padding: 4px;
+    font-size: 14px;
+}
+
+.line-1 select:last-child, .line-2 select:last-child {
+    margin-right: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.form-group {
+    width: 48%; /* Adjust width for proper alignment */
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.form-group-inline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-group-inline label {
+    margin-right: 8px;
+}
+
+.form-group-inline input {
+    margin-right: 10px;
+}
+
+.frequency-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.line-1, 
+.line-2 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.line-1 select, 
+.line-2 select {
+    margin-right: 8px;
+    padding: 4px;
+    font-size: 14px;
+}
+
+.line-1 select:last-child, 
+.line-2 select:last-child {
+    margin-right: 0;
+}
+
